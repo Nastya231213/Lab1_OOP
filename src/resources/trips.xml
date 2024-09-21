@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Trips xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:noNamespaceSchemaLocation="trips.xsd">
+    <Trip>
+        <Vacation>
+            <Destination>Hawaii</Destination>
+            <Days>7</Days>
+            <Transport>Flight</Transport>
+            <Food>All-inclusive</Food>
+            <ResortType>Beach</ResortType>
+            <StarRating>5</StarRating>
+            <BeachAccess>true</BeachAccess>
+        </Vacation>
+    </Trip>
+    <Trip>
+        <Vacation>
+            <Destination>Bali</Destination>
+            <Days>10</Days>
+            <Transport>Flight</Transport>
+            <Food>Breakfast included</Food>
+            <ResortType>Luxury</ResortType>
+            <StarRating>5</StarRating>
+            <BeachAccess>true</BeachAccess>
+        </Vacation>
+    </Trip>
+    <Trip>
+        <Excursion>
+            <Destination>Paris</Destination>
+            <Days>3</Days>
+            <Transport>Train</Transport>
+            <Food>Breakfast included</Food>
+            <GuideIncluded>true</GuideIncluded>
+            <ExcursionDuration>2</ExcursionDuration>
+            <LandmarksCovered>Effiel Tower</LandmarksCovered>
+            <LandmarksCovered>Louvre Museum</LandmarksCovered>
+        </Excursion>
+    </Trip>
+    <Trip>
+        <Excursion>
+            <Destination>Rome</Destination>
+            <Days>4</Days>
+            <Transport>Bus</Transport>
+            <Food>Lunch included</Food>
+            <GuideIncluded>true</GuideIncluded>
+            <ExcursionDuration>3</ExcursionDuration>
+            <LandmarksCovered>Colosseum</LandmarksCovered>
+            <LandmarksCovered>Vatican City</LandmarksCovered>
+        </Excursion>
+    </Trip>
+    <Trip>
+        <Treatment>
+            <Destination>Budapest</Destination>
+            <Days>5</Days>
+            <Transport>Car</Transport>
+            <Food>Full board</Food>
+            <MedicalProgram>Thermal baths</MedicalProgram>
+            <DoctorConsultationIncluded>true</DoctorConsultationIncluded>
+            <NumberOfTherapies>3</NumberOfTherapies>
+        </Treatment>
+    </Trip>
+    <Trip>
+        <Treatment>
+            <Destination>Thailand</Destination>
+            <Days>6</Days>
+            <Transport>Flight</Transport>
+            <Food>Full board</Food>
+            <MedicalProgram>Spa treatments</MedicalProgram>
+            <DoctorConsultationIncluded>false</DoctorConsultationIncluded>
+            <NumberOfTherapies>2</NumberOfTherapies>
+        </Treatment>
+    </Trip>
+    <Trip>
+        <Shopping>
+            <Destination>New York</Destination>
+            <Days>4</Days>
+            <Transport>Flight</Transport>
+            <Food>Varied</Food>
+            <ShoppingCenter>Times Square</ShoppingCenter>
+            <DiscountsAvailable>true</DiscountsAvailable>
+            <NumberOfShops>200</NumberOfShops>
+        </Shopping>
+    </Trip>
+    <Trip>
+        <Shopping>
+            <Destination>Dubai</Destination>
+            <Days>5</Days>
+            <Transport>Flight</Transport>
+            <Food>Luxury dining</Food>
+            <ShoppingCenter>The Dubai Mall</ShoppingCenter>
+            <DiscountsAvailable>true</DiscountsAvailable>
+            <NumberOfShops>1200</NumberOfShops>
+        </Shopping>
+    </Trip>
+    <Trip>
+        <Cruise>
+            <Destination>Caribbean</Destination>
+            <Days>10</Days>
+            <Transport>Cruise ship</Transport>
+            <Food>All meals included</Food>
+            <ShipName>Royal Caribbean</ShipName>
+            <CabinType>Ocean View</CabinType>
+            <NumberOfPortsVisited>5</NumberOfPortsVisited>
+        </Cruise>
+    </Trip>
+    <Trip>
+        <Cruise>
+            <Destination>Alaska</Destination>
+            <Days>7</Days>
+            <Transport>Cruise ship</Transport>
+            <Food>All meals included</Food>
+            <ShipName>Norwegian Bliss</ShipName>
+            <CabinType>Balcony</CabinType>
+            <NumberOfPortsVisited>4</NumberOfPortsVisited>
+        </Cruise>
+    </Trip>
+</Trips>

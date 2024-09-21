@@ -26,7 +26,6 @@
         </xs:complexType>
     </xs:element>
 
-    <!-- Наследуем VacationType от TripType -->
     <xs:complexType name="VacationTrip">
         <xs:complexContent>
             <xs:extension base="Trip">
