@@ -1,65 +1,90 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:complexType name="Trip">
+        <xs:sequence>
+            <xs:element name="Destination" type="xs:string"/>
+            <xs:element name="Days" type="xs:int"/>
+            <xs:element name="Transport" type="xs:string"/>
+            <xs:element name="Food" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:element name="Trips">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="Trip" maxOccurs="unbounded">
                     <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="Destination" type="xs:string"/>
-                            <xs:element name="Days" type="xs:int"/>
-                            <xs:element name="Transport" type="xs:string"/>
-                            <xs:element name="Food" type="xs:string"/>
-                            <xs:choice>
-                                <xs:element name="Vacation" type="VacationType"/>
-                                <xs:element name="Excursion" type="ExcursionType"/>
-                                <xs:element name="Treatment" type="TreatmentType"/>
-                                <xs:element name="Shopping" type="ShoppingType"/>
-                                <xs:element name="Cruise" type="CruiseType"/>
-                            </xs:choice>
-                        </xs:sequence>
+                        <xs:choice>
+                            <xs:element name="Vacation" type="VacationTrip"/>
+                            <xs:element name="Excursion" type="ExcursionTrip"/>
+                            <xs:element name="Treatment" type="TreatmentTrip"/>
+                            <xs:element name="Shopping" type="ShoppingTrip"/>
+                            <xs:element name="Cruise" type="CruiseTrip"/>
+                        </xs:choice>
                     </xs:complexType>
                 </xs:element>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
 
-    <xs:complexType name="VacationType">
-        <xs:sequence>
-            <xs:element name="ResortType" type="xs:string"/>
-            <xs:element name="StarRating" type="xs:int"/>
-            <xs:element name="BeachAccess" type="xs:boolean"/>
-        </xs:sequence>
+    <!-- Наследуем VacationType от TripType -->
+    <xs:complexType name="VacationTrip">
+        <xs:complexContent>
+            <xs:extension base="Trip">
+                <xs:sequence>
+                    <xs:element name="ResortType" type="xs:string"/>
+                    <xs:element name="StarRating" type="xs:int"/>
+                    <xs:element name="BeachAccess" type="xs:boolean"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="ExcursionType">
-        <xs:sequence>
-            <xs:element name="GuideIncluded" type="xs:boolean"/>
-            <xs:element name="ExcursionDuration" type="xs:int"/>
-            <xs:element name="LandmarksCovered" type="xs:string" maxOccurs="unbounded"/>
-        </xs:sequence>
+    <xs:complexType name="ExcursionTrip">
+        <xs:complexContent>
+            <xs:extension base="Trip">
+                <xs:sequence>
+                    <xs:element name="GuideIncluded" type="xs:boolean"/>
+                    <xs:element name="ExcursionDuration" type="xs:int"/>
+                    <xs:element name="LandmarksCovered" type="xs:string" maxOccurs="unbounded"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="TreatmentType">
-        <xs:sequence>
-            <xs:element name="MedicalProgram" type="xs:string"/>
-            <xs:element name="DoctorConsultationIncluded" type="xs:boolean"/>
-            <xs:element name="NumberOfTherapies" type="xs:int"/>
-        </xs:sequence>
+    <xs:complexType name="TreatmentTrip">
+        <xs:complexContent>
+            <xs:extension base="Trip">
+                <xs:sequence>
+                    <xs:element name="MedicalProgram" type="xs:string"/>
+                    <xs:element name="DoctorConsultationIncluded" type="xs:boolean"/>
+                    <xs:element name="NumberOfTherapies" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="ShoppingType">
-        <xs:sequence>
-            <xs:element name="ShoppingCenter" type="xs:string"/>
-            <xs:element name="DiscountsAvailable" type="xs:boolean"/>
-            <xs:element name="NumberOfShops" type="xs:int"/>
-        </xs:sequence>
+    <xs:complexType name="ShoppingTrip">
+        <xs:complexContent>
+            <xs:extension base="Trip">
+                <xs:sequence>
+                    <xs:element name="ShoppingCenter" type="xs:string"/>
+                    <xs:element name="DiscountsAvailable" type="xs:boolean"/>
+                    <xs:element name="NumberOfShops" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
 
-    <xs:complexType name="CruiseType">
-        <xs:sequence>
-            <xs:element name="ShipName" type="xs:string"/>
-            <xs:element name="CabinType" type="xs:string"/>
-            <xs:element name="NumberOfPortsVisited" type="xs:int"/>
-        </xs:sequence>
+    <xs:complexType name="CruiseTrip">
+        <xs:complexContent>
+            <xs:extension base="Trip">
+                <xs:sequence>
+                    <xs:element name="ShipName" type="xs:string"/>
+                    <xs:element name="CabinType" type="xs:string"/>
+                    <xs:element name="NumberOfPortsVisited" type="xs:int"/>
+                </xs:sequence>
+            </xs:extension>
+        </xs:complexContent>
     </xs:complexType>
+
 </xs:schema>
