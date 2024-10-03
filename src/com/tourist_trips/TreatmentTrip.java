@@ -108,5 +108,15 @@ public class TreatmentTrip
     public void setNumberOfTherapies(int value) {
         this.numberOfTherapies = value;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Medical Program: " + medicalProgram +
+                ", Doctor Consultation: " + doctorConsultationIncluded +
+                ", Number of Therapies: " + numberOfTherapies;
+    }
+    @Override
+    public String getTripType() {
+        return "Treatment Trip";
+    }
 }

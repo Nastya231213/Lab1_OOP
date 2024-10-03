@@ -149,5 +149,15 @@ public class Trip {
     public void setFood(String value) {
         this.food = value;
     }
-
+    public String getTripType() {
+        return "Generic Trip";
+    }
+    @Override
+    public String toString() {
+        return "Type: " + getTripType() +
+                ", Destination: " + destination +
+                ", Days: " + days +
+                ", Transport: " + transport +
+                ", Food: " + food;
+    }
 }

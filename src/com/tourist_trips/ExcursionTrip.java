@@ -115,5 +115,15 @@ public class ExcursionTrip
         }
         return this.landmarksCovered;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Guide Included: " + guideIncluded +
+                ", Excursion Duration: " + excursionDuration + " hours" +
+                ", Landmarks Covered: " + landmarksCovered;
+    }
+    @Override
+    public String getTripType() {
+        return "Excursion Trip";
+    }
 }

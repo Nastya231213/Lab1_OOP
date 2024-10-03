@@ -109,5 +109,14 @@ public class VacationTrip
     public void setBeachAccess(boolean value) {
         this.beachAccess = value;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Resort Type: " + resortType +
+                ", Star Rating: " + starRating +
+                ", Beach Access: " + beachAccess;
+    }
+    public String getTripType() {
+        return "Vacation Trip";
+    }
 }

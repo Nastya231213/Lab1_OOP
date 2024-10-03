@@ -106,5 +106,15 @@ public class ShoppingTrip
     public void setNumberOfShops(int value) {
         this.numberOfShops = value;
     }
-
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", Shopping Center: " + shoppingCenter +
+                ", Discounts Available: " + discountsAvailable +
+                ", Number of Shops: " + numberOfShops;
+    }
+    @Override
+    public String getTripType() {
+        return "Shopping Trip";
+    }
 }
