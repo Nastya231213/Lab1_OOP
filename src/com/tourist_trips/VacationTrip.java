@@ -46,6 +46,7 @@ public class VacationTrip
     extends Trip
 {
 
+
     @XmlElement(name = "ResortType", required = true)
     protected String resortType;
     @XmlElement(name = "StarRating")
